@@ -3865,7 +3865,13 @@
             }
           },
           "202": {
-            "description": "Accepted and the operation will complete asynchronously."
+            "description": "Accepted, reset will complete asynchronously.",
+            "headers": {
+              "location" : {
+                  "type" : "string",
+                  "description" : "URL to get the operation status. Perform HTTP GET."
+              }
+            }
           },
           "default": {
             "description": "Error response describing why the operation failed.",
