@@ -3155,7 +3155,7 @@
         ],
         "responses": {
           "202": {
-            "description": "Accepted and the operation will complete asynchronously."
+            "description": "Accepted, packet capture will stop. The operation will complete asynchronously."
           },
           "200": {
             "description": "Request successful. The operation packet capture stopped on vpn connection.",
