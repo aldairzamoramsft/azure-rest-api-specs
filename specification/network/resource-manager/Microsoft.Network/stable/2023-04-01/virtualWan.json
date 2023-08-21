@@ -3937,7 +3937,13 @@
             }
           },
           "202": {
-            "description": "Accepted and the operation will complete asynchronously."
+            "description": "Accepted and the operation will complete asynchronously. Perform a HTTP GET to the 'location' header to obtain the profile download URL.",
+            "headers": {
+              "location" : {
+                "type" : "string",
+                "description" : "Operation URL to download the p2s VPN profile."
+              }
+            }
           },
           "default": {
             "description": "Error response describing why the operation failed.",
