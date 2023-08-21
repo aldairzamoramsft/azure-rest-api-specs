@@ -781,7 +781,13 @@
             "description": "Request successful. Follow the location header for sas-url to output blob."
           },
           "202": {
-            "description": "Accepted and the operation will complete asynchronously. Follow the location header for sas-url to output blob."
+            "description": "Accepted and the operation will complete asynchronously. Follow the location header for sas-url to output blob.",
+            "headers": {
+              "location": {
+                "type": "string",
+                "description": "URL for the operation request."
+              }
+            }
           },
           "default": {
             "description": "Error response describing why the operation failed.",
@@ -3005,7 +3011,13 @@
         ],
         "responses": {
           "202": {
-            "description": "Accepted and the operation GetIkeSas will complete asynchronously."
+            "description": "Accepted, the operation GetIkeSas will complete asynchronously. Perform a GET agains the 'location' header value.",
+            "headers": {
+              "location": {
+                "type": "string",
+                "description": "URL to get the IKE SAS."
+              }
+            }
           },
           "200": {
             "description": "Request successful. The operation getikesas completed on vpn site link connection.",
@@ -6155,7 +6167,13 @@
             }
           },
           "202": {
-            "description": "Accepted and the operation will complete asynchronously."
+            "description": "Accepted and the operation will complete asynchronously. Perform a GET with the URL value in the 'azure-asyncoperation' header.",
+            "headers": {
+              "azure-asyncoperation": {
+                "type": "string",
+                "description": "The URL to track the status of the asynchronous operation."
+              }
+            }
           },
           "default": {
             "description": "Error response describing why the operation failed.",
