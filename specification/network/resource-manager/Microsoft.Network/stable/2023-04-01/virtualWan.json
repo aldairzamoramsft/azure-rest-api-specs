@@ -4000,7 +4000,13 @@
             }
           },
           "202": {
-            "description": "Accepted and the operation will complete asynchronously."
+            "description": "Accepted, perform a HTTP GET to the 'location' header value.",
+            "headers": {
+              "location" : {
+                "type" : "string",
+                "description" : "URL to get get health details."
+              }
+            }
           },
           "default": {
             "description": "Error response describing why the operation failed.",
@@ -4066,7 +4072,13 @@
             }
           },
           "202": {
-            "description": "Accepted and the operation will complete asynchronously."
+            "description": "Accepted and the operation will complete asynchronously.",
+            "headers": {
+              "location": {
+                "type": "string",
+                "description": "URL to get the vpn health detailed SAS URL."
+              }
+            }
           },
           "default": {
             "description": "Error response describing why the operation failed.",
@@ -4188,7 +4200,13 @@
             }
           },
           "202": {
-            "description": "Accepted and the operation will complete asynchronously."
+            "description": "Accepted, to get the SAS URL perform a HTTP GET to the 'location' header value.",
+            "headers": {
+              "location": {
+                "type": "string",
+                "description": "URL to get SAS URL."
+              }
+            }
           },
           "default": {
             "description": "Error response describing why the operation failed.",
@@ -5576,7 +5594,13 @@
             }
           },
           "202": {
-            "description": "Accepted and the operation will complete asynchronously."
+            "description": "Accepted, perform a HTTP GET to the 'location' header value.",
+            "headers": {
+              "location": {
+                "type": "string",
+                "description": "URL to get the learned routes."
+              }
+            }
           },
           "default": {
             "description": "Error response describing why the operation failed.",
@@ -5637,7 +5661,13 @@
             }
           },
           "202": {
-            "description": "Accepted and the operation will complete asynchronously."
+            "description": "Accepted, perform a HTTP GET to the 'location' header value.",
+            "headers": {
+              "location": {
+                "type": "string",
+                "description": "URL to get the advertised routes."
+              }
+            }
           },
           "default": {
             "description": "Error response describing why the operation failed.",
@@ -6179,11 +6209,11 @@
             }
           },
           "202": {
-            "description": "Accepted and the operation will complete asynchronously. Perform a GET with the URL value in the 'azure-asyncoperation' header.",
+            "description": "Accepted, perform a GET with the URL value in the 'location' header.",
             "headers": {
-              "azure-asyncoperation": {
+              "location": {
                 "type": "string",
-                "description": "The URL to track the status of the asynchronous operation."
+                "description": "URL to get the hub effective routes."
               }
             }
           },
@@ -6248,7 +6278,13 @@
             }
           },
           "202": {
-            "description": "Accepted and the operation will complete asynchronously."
+            "description": "Accepted, perform HTTP GET to the 'location' header.",
+            "headers": {
+              "location": {
+                "type": "string",
+                "description": "URL to get the inbound routes."
+              }
+            }
           },
           "default": {
             "description": "Error response describing why the operation failed.",
@@ -6311,7 +6347,13 @@
             }
           },
           "202": {
-            "description": "Accepted and the operation will complete asynchronously."
+            "description": "Accepted, perform HTTP GET to the 'location' header.",
+            "headers": {
+              "location": {
+                "type": "string",
+                "description": "URL to get the outbound routes."
+              }
+            }
           },
           "default": {
             "description": "Error response describing why the operation failed.",
