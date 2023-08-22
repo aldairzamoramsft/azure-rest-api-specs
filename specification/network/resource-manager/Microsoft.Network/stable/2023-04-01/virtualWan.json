@@ -781,7 +781,13 @@
             "description": "Request successful. Follow the location header for sas-url to output blob."
           },
           "202": {
-            "description": "Accepted and the operation will complete asynchronously. Follow the location header for sas-url to output blob."
+            "description": "Accepted and the operation will complete asynchronously. Follow the location header for sas-url to output blob.",
+            "headers": {
+              "location": {
+                "type": "string",
+                "description": "URL for the operation request."
+              }
+            }
           },
           "default": {
             "description": "Error response describing why the operation failed.",
@@ -3005,7 +3011,13 @@
         ],
         "responses": {
           "202": {
-            "description": "Accepted and the operation GetIkeSas will complete asynchronously."
+            "description": "Accepted, the operation GetIkeSas will complete asynchronously. Perform a GET agains the 'location' header value.",
+            "headers": {
+              "location": {
+                "type": "string",
+                "description": "URL to get the IKE SAS."
+              }
+            }
           },
           "200": {
             "description": "Request successful. The operation getikesas completed on vpn site link connection.",
@@ -3143,7 +3155,7 @@
         ],
         "responses": {
           "202": {
-            "description": "Accepted and the operation will complete asynchronously."
+            "description": "Accepted, packet capture will stop. The operation will complete asynchronously."
           },
           "200": {
             "description": "Request successful. The operation packet capture stopped on vpn connection.",
@@ -3853,7 +3865,13 @@
             }
           },
           "202": {
-            "description": "Accepted and the operation will complete asynchronously."
+            "description": "Accepted, reset will complete asynchronously.",
+            "headers": {
+              "location" : {
+                  "type" : "string",
+                  "description" : "URL to get the operation status. Perform HTTP GET."
+              }
+            }
           },
           "default": {
             "description": "Error response describing why the operation failed.",
@@ -3919,7 +3937,13 @@
             }
           },
           "202": {
-            "description": "Accepted and the operation will complete asynchronously."
+            "description": "Accepted and the operation will complete asynchronously. Perform a HTTP GET to the 'location' header to obtain the profile download URL.",
+            "headers": {
+              "location" : {
+                "type" : "string",
+                "description" : "Operation URL to download the p2s VPN profile."
+              }
+            }
           },
           "default": {
             "description": "Error response describing why the operation failed.",
@@ -3976,7 +4000,13 @@
             }
           },
           "202": {
-            "description": "Accepted and the operation will complete asynchronously."
+            "description": "Accepted, perform a HTTP GET to the 'location' header value.",
+            "headers": {
+              "location" : {
+                "type" : "string",
+                "description" : "URL to get get health details."
+              }
+            }
           },
           "default": {
             "description": "Error response describing why the operation failed.",
@@ -4042,7 +4072,13 @@
             }
           },
           "202": {
-            "description": "Accepted and the operation will complete asynchronously."
+            "description": "Accepted and the operation will complete asynchronously.",
+            "headers": {
+              "location": {
+                "type": "string",
+                "description": "URL to get the vpn health detailed SAS URL."
+              }
+            }
           },
           "default": {
             "description": "Error response describing why the operation failed.",
@@ -4164,7 +4200,13 @@
             }
           },
           "202": {
-            "description": "Accepted and the operation will complete asynchronously."
+            "description": "Accepted, to get the SAS URL perform a HTTP GET to the 'location' header value.",
+            "headers": {
+              "location": {
+                "type": "string",
+                "description": "URL to get SAS URL."
+              }
+            }
           },
           "default": {
             "description": "Error response describing why the operation failed.",
@@ -5552,7 +5594,13 @@
             }
           },
           "202": {
-            "description": "Accepted and the operation will complete asynchronously."
+            "description": "Accepted, perform a HTTP GET to the 'location' header value.",
+            "headers": {
+              "location": {
+                "type": "string",
+                "description": "URL to get the learned routes."
+              }
+            }
           },
           "default": {
             "description": "Error response describing why the operation failed.",
@@ -5613,7 +5661,13 @@
             }
           },
           "202": {
-            "description": "Accepted and the operation will complete asynchronously."
+            "description": "Accepted, perform a HTTP GET to the 'location' header value.",
+            "headers": {
+              "location": {
+                "type": "string",
+                "description": "URL to get the advertised routes."
+              }
+            }
           },
           "default": {
             "description": "Error response describing why the operation failed.",
@@ -6155,7 +6209,13 @@
             }
           },
           "202": {
-            "description": "Accepted and the operation will complete asynchronously."
+            "description": "Accepted, perform a GET with the URL value in the 'location' header.",
+            "headers": {
+              "location": {
+                "type": "string",
+                "description": "URL to get the hub effective routes."
+              }
+            }
           },
           "default": {
             "description": "Error response describing why the operation failed.",
@@ -6218,7 +6278,13 @@
             }
           },
           "202": {
-            "description": "Accepted and the operation will complete asynchronously."
+            "description": "Accepted, perform HTTP GET to the 'location' header.",
+            "headers": {
+              "location": {
+                "type": "string",
+                "description": "URL to get the inbound routes."
+              }
+            }
           },
           "default": {
             "description": "Error response describing why the operation failed.",
@@ -6281,7 +6347,13 @@
             }
           },
           "202": {
-            "description": "Accepted and the operation will complete asynchronously."
+            "description": "Accepted, perform HTTP GET to the 'location' header.",
+            "headers": {
+              "location": {
+                "type": "string",
+                "description": "URL to get the outbound routes."
+              }
+            }
           },
           "default": {
             "description": "Error response describing why the operation failed.",
